@@ -1,3 +1,6 @@
-<div class="flex dvh border-2 border-red-500 w-full">
-    <app-header-spreadsheet ngSkipHydration class="w-full"></app-header-spreadsheet>
+<div class="flex flex-col dvh w-full">
+    <div class="header-controls-container px-5 py-2 flex flex-col gap-2">
+        <app-header-spreadsheet ngSkipHydration class="w-full"></app-header-spreadsheet>
+        <app-controls-spreadsheet></app-controls-spreadsheet>
+    </div>
 </div>

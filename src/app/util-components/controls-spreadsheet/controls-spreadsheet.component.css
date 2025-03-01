@@ -1,0 +1,7 @@
+.spreadsheet-controls > div{
+    border-right: 1px solid gray;
+    padding: 0px 1rem 0px 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
