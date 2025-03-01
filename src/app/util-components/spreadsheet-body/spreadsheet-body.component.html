@@ -24,7 +24,6 @@
                 (click)="handleClick(rowIndex, colIndex)"
                 [ngStyle]="{ 'border': (selectedCellIndex === rowIndex * totalCols + colIndex) ? '2px solid blue' : '' }"
             >
-            {{rowIndex * totalCols + colIndex}}
             </div>
         </div>
     </div>

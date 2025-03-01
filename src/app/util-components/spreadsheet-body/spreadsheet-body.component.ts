@@ -17,9 +17,7 @@ export class SpreadsheetBodyComponent {
   selectedCellIndex: number = 0;
 
   ngAfterViewInit(){
-    console.log("view init called");
     this.cellElements = document.querySelectorAll('.cell');
-    console.log(this.cellElements)
   }
 
   ngOnChange(cellElements: SimpleChange ){
@@ -33,19 +31,33 @@ export class SpreadsheetBodyComponent {
   }
 
   handleKeydown(event: KeyboardEvent, rowIndex: number, colIndex: number) {
-
     let newRow = rowIndex;
     let newCol = colIndex;
 
     switch (event.key) {
       case "ArrowRight":
-        if (colIndex + 1 < this.totalCols) newCol++;
+        if (colIndex + 1 < this.totalCols){
+          newCol++
+        }else{
+          const lastChar = this.columns[this.columns.length - 1]
+          const newCharCode = lastChar.charCodeAt(0) + 1;
+          const newChar = String.fromCharCode(newCharCode);
+          this.columns.push(newChar)
+          this.rows.forEach(row => row.push(''));
+          this.totalCols = this.columns.length;
+        }
         break;
       case "ArrowLeft":
         if (colIndex > 0) newCol--;
         break;
       case "ArrowDown":
-        if (rowIndex + 1 < this.totalRows) newRow++;
+        if (rowIndex + 1 < this.totalRows){
+          newRow++
+        }else{
+          const newRowArray = new Array(this.columns.length).fill('');
+          this.rows.push(newRowArray);
+          this.totalRows = this.rows.length;
+        };
         break;
       case "ArrowUp":
         if (rowIndex > 0) newRow--;
