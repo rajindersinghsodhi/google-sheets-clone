@@ -21,6 +21,7 @@
                 contenteditable="true"
                 class="cell w-24 h-8 px-2 flex items-center focus:outline-none border border-gray-100"
                 (keydown)="handleKeydown($event, rowIndex, colIndex)"
+                (click)="handleClick(rowIndex, colIndex)"
                 [ngStyle]="{ 'border': (selectedCellIndex === rowIndex * totalCols + colIndex) ? '2px solid blue' : '' }"
             >
             {{rowIndex * totalCols + colIndex}}

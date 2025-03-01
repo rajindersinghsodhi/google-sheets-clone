@@ -55,6 +55,10 @@ export class SpreadsheetBodyComponent {
     this.focusCell(newRow, newCol);
   }
 
+  handleClick(rowIndex: number, colIndex: number){
+    this.selectedCellIndex = rowIndex * this.totalCols + colIndex;
+  }
+
   focusCell(rowIndex: number, colIndex: number) {
     
     const cellElements = document.querySelectorAll('.cell') as NodeListOf<HTMLElement>;
