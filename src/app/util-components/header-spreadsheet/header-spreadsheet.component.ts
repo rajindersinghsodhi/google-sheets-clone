@@ -18,12 +18,4 @@ import { HelpComponent } from "../spreadsheet-contols/help/help.component";
   styleUrl: './header-spreadsheet.component.css'
 })
 export class HeaderSpreadsheetComponent {
-  @ViewChildren(MatMenuTrigger) menuTriggers!: QueryList<MatMenuTrigger>;
-
-  openMenu(menuName: string) {
-    const trigger = this.menuTriggers.find((menu) => menu.menu?.panelId === menuName);
-    if (trigger) {
-      trigger.openMenu();
-    }
-  }
 }
