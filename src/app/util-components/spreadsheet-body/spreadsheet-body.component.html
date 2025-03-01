@@ -1,0 +1,19 @@
+<div class="spreadsheet border border-gray-300 rounded-md overflow-auto w-full">
+    <!-- Header Row -->
+    <div class="flex sticky top-0 bg-gray-100 border-b border-gray-300">
+        <div class="w-12 h-4 flex items-center justify-center bg-gray-200 border-r border-gray-300"></div>
+        <div *ngFor="let col of columns" class="w-24 h-4 flex items-center justify-center border-r border-gray-300 text-xs">
+            {{ col }}
+        </div>
+    </div>
+
+    <!-- Rows -->
+    <div class="spreadsheet-body">
+        <div *ngFor="let row of rows; let rowIndex = index" class="flex border-b border-gray-300">
+            <div class="w-12 h-4 flex items-center justify-center bg-gray-100 border-r border-gray-300 text-xs">
+                {{ rowIndex + 1 }}
+            </div>
+            <div *ngFor="let cell of row" contenteditable="true" class="cell w-24 h-4 border-r border-gray-300 px-2 flex items-center focus:outline-none"></div>
+        </div>
+    </div>
+</div>
