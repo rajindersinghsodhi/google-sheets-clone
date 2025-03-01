@@ -1,5 +1,76 @@
-<button mat-button [matMenuTriggerFor]="format">{{menuTitle}}</button>
-<mat-menu #format="matMenu">
-  <button mat-menu-item>edit 1</button>
-  <button mat-menu-item>edit 2</button>
+<button mat-button [matMenuTriggerFor]="formatMenu">Format</button>
+<mat-menu #formatMenu="matMenu">
+  <button mat-menu-item style="min-height: 30px!important;" class="menu-item">
+    <mat-icon>palette</mat-icon>
+    <span>Theme</span>
+  </button>
+
+  <mat-divider></mat-divider>
+
+  <button mat-menu-item style="min-height: 30px!important;" class="menu-item">
+    <mat-icon>123</mat-icon>
+    <span>Number</span>
+    <mat-icon class="arrow">chevron_right</mat-icon>
+  </button>
+  <button mat-menu-item style="min-height: 30px!important;" class="menu-item">
+    <mat-icon>format_bold</mat-icon>
+    <span>Text</span>
+    <mat-icon class="arrow">chevron_right</mat-icon>
+  </button>
+  <button mat-menu-item style="min-height: 30px!important;" class="menu-item">
+    <mat-icon>format_align_left</mat-icon>
+    <span>Alignment</span>
+    <mat-icon class="arrow">chevron_right</mat-icon>
+  </button>
+  <button mat-menu-item style="min-height: 30px!important;" class="menu-item">
+    <mat-icon>wrap_text</mat-icon>
+    <span>Wrapping</span>
+    <mat-icon class="arrow">chevron_right</mat-icon>
+  </button>
+  <button mat-menu-item style="min-height: 30px!important;" class="menu-item">
+    <mat-icon>screen_rotation</mat-icon>
+    <span>Rotation</span>
+    <mat-icon class="arrow">chevron_right</mat-icon>
+  </button>
+  <button mat-menu-item style="min-height: 30px!important;" class="menu-item">
+    <mat-icon>smart_toy</mat-icon>
+    <span>Smart chips</span>
+    <mat-icon class="arrow">chevron_right</mat-icon>
+  </button>
+
+  <mat-divider></mat-divider>
+
+  <button mat-menu-item style="min-height: 30px!important;" class="menu-item">
+    <mat-icon>text_fields</mat-icon>
+    <span>Font size</span>
+    <mat-icon class="arrow">chevron_right</mat-icon>
+  </button>
+  <button mat-menu-item style="min-height: 30px!important;" class="menu-item disabled-item">
+    <mat-icon>grid_on</mat-icon>
+    <span>Merge cells</span>
+  </button>
+
+  <mat-divider></mat-divider>
+
+  <button mat-menu-item style="min-height: 30px!important;" class="menu-item">
+    <mat-icon>table_chart</mat-icon>
+    <span>Convert to table</span>
+    <span class="shortcut">Ctrl+Alt+T</span>
+  </button>
+  <button mat-menu-item style="min-height: 30px!important;" class="menu-item">
+    <mat-icon>format_paint</mat-icon>
+    <span>Conditional formatting</span>
+  </button>
+  <button mat-menu-item style="min-height: 30px!important;" class="menu-item">
+    <mat-icon>format_color_fill</mat-icon>
+    <span>Alternating colors</span>
+  </button>
+
+  <mat-divider></mat-divider>
+
+  <button mat-menu-item style="min-height: 30px!important;" class="menu-item">
+    <mat-icon>format_clear</mat-icon>
+    <span>Clear formatting</span>
+    <span class="shortcut">Ctrl+\</span>
+  </button>
 </mat-menu>
