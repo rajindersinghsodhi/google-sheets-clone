@@ -1,1 +1,5 @@
-<p>extensions works!</p>
+<button mat-button [matMenuTriggerFor]="extensions">{{menuTitle}}</button>
+<mat-menu #extensions="matMenu">
+  <button mat-menu-item>extensions 1</button>
+  <button mat-menu-item>extensions 2</button>
+</mat-menu>

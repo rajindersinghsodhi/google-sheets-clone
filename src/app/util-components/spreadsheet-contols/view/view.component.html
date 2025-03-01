@@ -1,1 +1,5 @@
-<p>view works!</p>
+<button mat-button [matMenuTriggerFor]="view">{{menuTitle}}</button>
+<mat-menu #view="matMenu">
+  <button mat-menu-item>edit 1</button>
+  <button mat-menu-item>edit 2</button>
+</mat-menu>

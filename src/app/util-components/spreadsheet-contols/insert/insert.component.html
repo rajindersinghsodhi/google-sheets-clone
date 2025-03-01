@@ -1,1 +1,5 @@
-<p>insert works!</p>
+<button mat-button [matMenuTriggerFor]="insert">{{menuTitle}}</button>
+<mat-menu #insert="matMenu">
+  <button mat-menu-item>edit 1</button>
+  <button mat-menu-item>edit 2</button>
+</mat-menu>

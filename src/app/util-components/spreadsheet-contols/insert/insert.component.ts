@@ -1,11 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { MatMenuModule } from '@angular/material/menu';
 
 @Component({
   selector: 'app-insert',
-  imports: [],
+  imports: [MatMenuModule],
   templateUrl: './insert.component.html',
   styleUrl: './insert.component.css'
 })
 export class InsertComponent {
-
+  @Input() menuTitle = '';
 }
