@@ -38,9 +38,10 @@ export class SpreadsheetBodyComponent {
   }
 
   handleKeydown(event: KeyboardEvent, rowIndex: number, colIndex: number) {
+    console.log(rowIndex)
+    console.log(colIndex)
     let newRow = rowIndex;
     let newCol = colIndex;
-
     switch (event.key) {
       case "ArrowRight":
         if (colIndex + 1 < this.totalCols){
@@ -52,6 +53,7 @@ export class SpreadsheetBodyComponent {
           this.columns.push(newChar)
           this.rows.forEach(row => row.push(''));
           this.totalCols = this.columns.length;
+          newCol++;
         }
         break;
       case "ArrowLeft":
