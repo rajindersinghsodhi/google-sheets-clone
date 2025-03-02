@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, SimpleChange } from '@angular/core';
+import { SharedService } from '../../services/shared.service';
 
 @Component({
   selector: 'app-spreadsheet-body',
@@ -16,18 +17,24 @@ export class SpreadsheetBodyComponent {
   cellElements: any;
   selectedCellIndex: number = 0;
 
+  constructor(
+    private shared: SharedService
+  ){
+
+  }
+
   ngAfterViewInit(){
     this.cellElements = document.querySelectorAll('.cell');
   }
 
   ngOnChange(cellElements: SimpleChange ){
-    console.log("simple change called");
+    // console.log("simple change called");
   }
   
   
   ngAfterViewChecked(){
-    console.log(this.selectedCellIndex)
-    console.log("view cheked")
+    // console.log(this.selectedCellIndex)
+    // console.log("view cheked")
   }
 
   handleKeydown(event: KeyboardEvent, rowIndex: number, colIndex: number) {
@@ -64,11 +71,15 @@ export class SpreadsheetBodyComponent {
         break;
     }
 
+    const cellInfo = this.columns[newCol] + (newRow+1);
+    this.shared.updateCellInfo(cellInfo)
     this.focusCell(newRow, newCol);
   }
 
   handleClick(rowIndex: number, colIndex: number){
     this.selectedCellIndex = rowIndex * this.totalCols + colIndex;
+    const cellInfo = this.columns[colIndex] + (rowIndex+1);
+    this.shared.updateCellInfo(cellInfo)
   }
 
   focusCell(rowIndex: number, colIndex: number) {
