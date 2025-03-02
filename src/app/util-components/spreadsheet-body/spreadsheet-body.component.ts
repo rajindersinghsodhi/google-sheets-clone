@@ -10,8 +10,11 @@ import { SharedService } from '../../services/shared.service';
   styleUrl: './spreadsheet-body.component.css'
 })
 export class SpreadsheetBodyComponent {
-  columns = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N']; // Unique column names
-  rows = Array.from({ length: 20 }, () => Array(this.columns.length).fill(''));
+  columns = [
+    'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 
+    'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'
+  ]; // Unique column names
+  rows = Array.from({ length: 1000 }, () => Array(this.columns.length).fill(''));
   totalRows = this.rows.length;
   totalCols = this.columns.length; // 20 rows, dynamic column count
   cellElements: any;
@@ -47,13 +50,13 @@ export class SpreadsheetBodyComponent {
         if (colIndex + 1 < this.totalCols){
           newCol++
         }else{
-          const lastChar = this.columns[this.columns.length - 1]
-          const newCharCode = lastChar.charCodeAt(0) + 1;
-          const newChar = String.fromCharCode(newCharCode);
-          this.columns.push(newChar)
-          this.rows.forEach(row => row.push(''));
-          this.totalCols = this.columns.length;
-          newCol++;
+          // const lastChar = this.columns[this.columns.length - 1]
+          // const newCharCode = lastChar.charCodeAt(0) + 1;
+          // const newChar = String.fromCharCode(newCharCode);
+          // this.columns.push(newChar)
+          // this.rows.forEach(row => row.push(''));
+          // this.totalCols = this.columns.length;
+          // newCol++;
         }
         break;
       case "ArrowLeft":
@@ -63,9 +66,9 @@ export class SpreadsheetBodyComponent {
         if (rowIndex + 1 < this.totalRows){
           newRow++
         }else{
-          const newRowArray = new Array(this.columns.length).fill('');
-          this.rows.push(newRowArray);
-          this.totalRows = this.rows.length;
+          // const newRowArray = new Array(this.columns.length).fill('');
+          // this.rows.push(newRowArray);
+          // this.totalRows = this.rows.length;
         };
         break;
       case "ArrowUp":

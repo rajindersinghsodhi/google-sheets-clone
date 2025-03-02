@@ -12,6 +12,12 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   }
   
   /* Hide scrollbar for Firefox */
-  .hide-scrollbar {
-    scrollbar-width: none;
-  }
+.hide-scrollbar {
+  scrollbar-width: none;
+}
+
+.mat-icon{
+  color: gray;
+  fill: none!important;
+  font-variation-settings: 'FILL' 0; 
+}
