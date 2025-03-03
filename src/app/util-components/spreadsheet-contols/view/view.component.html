@@ -1,0 +1,39 @@
+<button mat-button [matMenuTriggerFor]="viewMenu">View</button>
+<mat-menu #viewMenu="matMenu">
+  <button mat-menu-item style="min-height: 30px!important;" class="menu-item">
+    <mat-icon>visibility</mat-icon>
+    <span>Show</span>
+    <mat-icon class="arrow">chevron_right</mat-icon>
+  </button>
+  <button mat-menu-item style="min-height: 30px!important;" class="menu-item">
+    <mat-icon>grid_on</mat-icon>
+    <span>Freeze</span>
+    <mat-icon class="arrow">chevron_right</mat-icon>
+  </button>
+  <button mat-menu-item style="min-height: 30px!important;" class="menu-item">
+    <mat-icon>add_box</mat-icon>
+    <span>Group</span>
+    <mat-icon class="arrow">chevron_right</mat-icon>
+  </button>
+  <button mat-menu-item style="min-height: 30px!important;" class="menu-item">
+    <mat-icon>insert_comment</mat-icon>
+    <span>Comments</span>
+    <mat-icon class="arrow">chevron_right</mat-icon>
+  </button>
+  <mat-divider></mat-divider>
+  <button mat-menu-item style="min-height: 30px!important;" class="menu-item disabled-item" disabled>
+    <mat-icon>folder</mat-icon>
+    <span>Hidden sheets</span>
+    <mat-icon class="arrow">chevron_right</mat-icon>
+  </button>
+  <mat-divider></mat-divider>
+  <button mat-menu-item style="min-height: 30px!important;" class="menu-item">
+    <mat-icon>zoom_in</mat-icon>
+    <span>Zoom</span>
+    <mat-icon class="arrow">chevron_right</mat-icon>
+  </button>
+  <button mat-menu-item style="min-height: 30px!important;" class="menu-item">
+    <mat-icon>fullscreen</mat-icon>
+    <span>Full screen</span>
+  </button>
+</mat-menu>

@@ -1,0 +1,21 @@
+<div class="home-screen h-dvh flex flex-col w-full">
+    <div class="hero-section flex flex-col  gap-5 w-full bg-gray-100 h-fit p-5">
+        <div class="icon-name flex w-full justify-center items-center">
+            <img src="icon.png" alt="" class="h-20">
+            <span class="text-3xl font-medium">Google Sheets Clone</span>
+        </div>
+        <div class="welcome flex flex-col gap-3 items-center justify-center">
+            <span class="text-xl italic">Welcome to Google sheets clone - Let's Start working with new sheet</span>
+            <button class="bg-green-500 rounded-md p-2 text-white cursor-pointer font-medium" (click)="navigateToSpreadsheet()">Click to start</button>
+        </div>
+    </div>
+    <div class="sheets-container flex flex-col items-center h-full w-full p-5">
+        <div class="flex justify-center">
+            <span>Recent Spreadsheets</span>
+        </div>
+        <div class="sheet-info flex justify-between border-none p-3 shadow-md rounded-md w-6/12">
+            <span>New sheet</span>
+            <span>date</span>
+        </div>
+    </div>
+</div>

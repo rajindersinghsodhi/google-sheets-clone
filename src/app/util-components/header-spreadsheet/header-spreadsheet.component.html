@@ -1,0 +1,35 @@
+<div class="header-spreadsheet w-full flex justify-between">
+    <div class="header-spreadsheet-left flex gap-3 items-center">
+        <div class="header-icon flex items-center">
+            <img src="icon.png" class="h-9" alt="" />
+        </div>
+        <div class="title-controls items-center">
+            <div class="title flex">
+                <h1 class="text-lg">New File</h1>
+            </div>
+            <div class="controls flex gap-3 text-sm">
+                <!-- <span>File</span> -->
+                 <app-file [menuTitle]="'File'"></app-file>
+                 <app-edit [menuTitle]="'Edit'"></app-edit>
+                 <app-view [menuTitle]="'View'"></app-view>
+                 <app-insert [menuTitle]="'Insert'"></app-insert>
+                 <app-format [menuTitle]="'Format'"></app-format>
+                 <app-data [menuTitle]="'Data'"></app-data>
+                 <app-tools [menuTitle]="'Tools'"></app-tools>
+                 <app-extensions [menuTitle]="'Extensions'"></app-extensions>
+                 <app-help [menuTitle]="'Help'"></app-help>
+            </div>
+        </div>
+    </div>
+    <div class="header-spreadsheet-right flex items-center gap-5">
+        <div class="more-options flex gap-5">
+            <mat-icon>history</mat-icon>
+            <mat-icon>comment</mat-icon>
+            <mat-icon>videocam</mat-icon>
+        </div>
+        <div class="profile-sharing flex">
+            <span>sharing</span>
+            <mat-icon>account_circle</mat-icon>
+        </div>
+    </div>
+</div>
