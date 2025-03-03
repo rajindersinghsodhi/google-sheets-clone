@@ -30,9 +30,9 @@ A new spreadsheet will open in which you can enter data
 
 ## Tech Stack
 
-Angular 17 - Frontend framework
-RxJS - Reactive programming
-Tailwind CSS - Styling
-TypeScript - Type safety
-MongoDB - upcoming
+Angular 17 - Frontend framework <br>
+RxJS - Reactive programming <br>
+Tailwind CSS - Styling <br>
+TypeScript - Type safety <br>
+MongoDB - upcoming <br>
 Expressjs - upcoming
