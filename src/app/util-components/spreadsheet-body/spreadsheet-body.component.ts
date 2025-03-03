@@ -14,7 +14,7 @@ export class SpreadsheetBodyComponent {
     'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 
     'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'
   ]; // Unique column names
-  rows = Array.from({ length: 1000 }, () => Array(this.columns.length).fill(''));
+  rows = Array.from({ length: 30 }, () => Array(this.columns.length).fill(''));
   totalRows = this.rows.length;
   totalCols = this.columns.length; // 20 rows, dynamic column count
   cellElements: any;
